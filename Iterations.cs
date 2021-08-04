@@ -124,7 +124,7 @@ namespace DotnetIteration
         public static bool EveryoneIsOdd(List<int> numbers)
         {
             //throw new System.NotImplementedException();
-            return numbers.All(number => (number != 0));
+            return numbers.All(number => number % 2 != 0);
 
         }
 
@@ -136,8 +136,9 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            throw new System.NotImplementedException();
-            //return sentences.Select(sentence => sentence $"{sentence}");
+            //throw new System.NotImplementedException();
+            return sentences.Find(sentence => sentence.Contains("needle"));
+
         }
 
 
@@ -148,9 +149,8 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> sentences)
         {
-            throw new System.NotImplementedException();
-            //return sentences.FindIndex(sentence => (index, sentence));
-            return sentences.Where(sentence, index => index = );
+            //throw new System.NotImplementedException();
+            return sentences.FindIndex(sentence => sentence.Contains("needle"));
         }
 
 
@@ -162,8 +162,7 @@ namespace DotnetIteration
         public static bool SomeoneToLove(List<string> words)
         {
             //throw new System.NotImplementedException();
-            //return words.Any(word => word.String = 4);
-            return words.Where((number, index) => (index = four));
+            return words.Any(word => word.Length == 4);
         }
     }
 }
